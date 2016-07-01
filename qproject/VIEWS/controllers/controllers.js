@@ -2349,8 +2349,78 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
 
 
     $scope.formData = {};
-    $scope.hints = "Hints: "
+    $scope.formData.option = {
+        a:false,
+        b:false,
+        c:false,
+        d:false,
+        e:false
+    };
+    
+    //$scope.hints = "Hints: "
+    $scope.question={};
+    $scope.buttonID={};
 
+    var stat1=[1,1,1,1,1];
+    var stat2=[1,1,1,1,1];
+    var stat3=[1,1,1,1,1];
+    var count=0;
+
+    $scope.init = function() {
+        var i=0;
+        //console.log(stat1[0],stat1[1],stat1[2],stat1[3],stat1[4]);
+        //populate options for question1 
+        while(i<3)
+        {    
+        var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            //console.log(num);
+            if(stat1[num])
+            {
+                stat1[num]=0;
+                i++;
+            }
+            if(i==1&&stat1[1])
+            {
+                i++;
+                stat1[1]=0;
+            }    
+        }
+        i=0;     
+        //var stat2=[1,1,1,1,1];
+        //populate options for question2
+        while(i<3)
+        {    
+            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            //console.log(num);
+            if(stat2[num])
+            {
+                stat2[num]=0;
+                i++;
+            }
+            if(i==1&&stat2[2])
+            {
+                i++;
+                stat2[2]=0;
+            }
+        }
+        i=0;
+        //populate options for question2
+        while(i<3)
+        {    
+            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            //console.log(num);
+            if(stat3[num])
+            {
+                stat3[num]=0;
+                i++;
+            }
+            if(i==1&&stat3[3])
+            {
+                i++;
+                stat3[3]=0;
+            }
+        }//
+    }  
 
     $scope.test = function () {
         console.log('inside redd')
@@ -2358,8 +2428,20 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
     }
 
     $scope.GetRandom = function () {
-        var num = Math.floor((Math.random() * (2) + 0));
-        return num;
+        //console.log($scope.question.option+","+$scope.question.number)
+        if(!stat1[$scope.question.option]&&$scope.question.number==1)
+            return true;
+
+        if(!stat2[$scope.question.option]&&$scope.question.number==2)
+            return true;
+
+        if(!stat3[$scope.question.option]&&$scope.question.number==3)
+            return true;
+        else    
+            return false;
+        
+        //var num = Math.floor((Math.random() * (2) + 0));
+        //return num;
     }
 
     $scope.controllerSayHello = function () {
@@ -2368,32 +2450,87 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
 
     $scope.CheckAnswers = function () {
 
-        if($scope.formData.option.c)
-        {
-            console.log("inside option c")
-            $scope.hints = "Hints: "
-            $scope.hints += "makes a folder named newdir, not tutorial1"
-        }
-        else if($scope.formData.option.d)
-        {
-            $scope.hints = "Hints: "
-            console.log("inside option d")
-            $scope.hints += "the save command tries to save in a directory named mkdir"
-        }
-        else if($scope.formData.option.e)
-        {
-            $scope.hints = "Hints: "
-            console.log("inside option e")
-            $scope.hints += "the directory name needs to be created as a string"
-        }
 
+        if($scope.buttonID=='a')
+        {   
+            console.log("question 1")
+            console.log($scope.formData.option.a)
+            if($scope.formData.option.a)
+            {
+                $scope.question.x = "Correct Answer! "
+            }
+            else      
+                $scope.question.x = "Wrong Answer! "
+        }
+        
+        
 
     }
 
 
 }]);
 
+//this directive has access to all controller covered in it
+app.directive("chapter2AssessmentP1", function () {
 
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Select all of the options below which will:</h1>"+
+        "<h4>"+
+        "<li>Create a directory named <i>tutorial1</i> in the current working directory</li>"+
+        "<li>Save the workspace in the <i>tutorial1</i> directory in a file named <i>file1</i></li>"+
+        "<li>Clear the workspace</li>"+
+        "<li>Load <i>file1</i> into the workspace</li>"+
+        "</h4>" +
+
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.a\" ><br>" +
+        ">> mkdir tutorial1 <br>" +
+        ">> save tutorial1/file1 <br> " +
+        ">> clear all <br>" +
+        ">> load tutorial1/file1" +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.b\" ><br>" +
+        ">> mkdir ('tutorial1') <br> " +
+        ">> cd tutorial1 <br> " +
+        ">> clear <br> " +
+        ">> load file1 " +
+        "</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.c\" ><br> " +
+        " >> newdir = \'tutorial1\'; <br> " +
+        " >> save tutorial1 <br> " +
+        " >> clear all <br> " +
+        " >> load tutorial1/file1 " +
+        " </label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.d\" ><br> " +
+        "       >> mkdir('tutorial1') <br> " +
+        "       >> save mkdir/file1 <br> " +
+        "       >> clear <br> " +
+        "       >> load tutorial1/file1 " +
+        "   </label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=4;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.e\" ><br> " +
+        "   >> newdir = tutorial; <br> " +
+        "   >> mkdir('newdir') <br> " +
+        "   >> save tutorial <br> " +
+        "   >> clear all <br> " +
+        "   >> load tutorial1/file1 " +
+        "  </label><br> " +
+        "</h4>" +
+
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='a';CheckAnswers()\" type=\"button\" ></button> " +
+            "<br>"+
+            "<h3>{{question.x}}</h3>"
+
+
+    return directive;
+
+});
 
 
 //this directive has access to all controller covered in it
@@ -2413,35 +2550,35 @@ app.directive("chapter2AssessmentP2", function () {
         "<li>Check the contents of the workspace</li></h4>" +
 
 
-        "<label class=\"checkbox-inline\" ng-show=\"GetRandom()\">" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.a\" ><br>" +
         ">> mkdir tutorial1 <br>" +
         ">> save tutorial1/file1 <br> " +
         ">> clear all <br>" +
         ">> load tutorial1/file1" +
         "</label><br>" +
-        "<label class=\"checkbox-inline\" ng-show=\"GetRandom()\"> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.b\" ><br>" +
         ">> mkdir ('tutorial1') <br> " +
         ">> cd tutorial1 <br> " +
         ">> clear <br> " +
         ">> load file1 " +
         "</label><br> " +
-        "<label class=\"checkbox-inline\" ng-show=\"GetRandom()\"> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.c\" ><br> " +
         " >> newdir = \'tutorial1\'; <br> " +
         " >> save tutorial1 <br> " +
         " >> clear all <br> " +
         " >> load tutorial1/file1 " +
         " </label><br> " +
-        "<label class=\"checkbox-inline\" ng-show=\"GetRandom()\"> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.d\" ><br> " +
         "       >> mkdir('tutorial1') <br> " +
         "       >> save mkdir/file1 <br> " +
         "       >> clear <br> " +
         "       >> load tutorial1/file1 " +
         "   </label><br> " +
-        "<label class=\"checkbox-inline\" ng-show=\"GetRandom()\"> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=4;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.e\" ><br> " +
         "   >> newdir = tutorial; <br> " +
         "   >> mkdir('newdir') <br> " +
@@ -2451,7 +2588,7 @@ app.directive("chapter2AssessmentP2", function () {
         "  </label><br> " +
         "</h4>" +
 
-        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"CheckAnswers()\" type=\"button\" ></button> " +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='b';CheckAnswers()\" type=\"button\" ></button> " +
             "<br>"+
             "<h3>{{hints}}</h3>"
 
@@ -2472,35 +2609,35 @@ app.directive("chapter2AssessmentP3", function () {
         "<li>Make tutorial3 the current working directory</li>" +
         "<li>Check the current working directory</li>" +
 
-        "<label class=\"checkbox-inline\" ng-show=\"GetRandom()\">" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=0;GetRandom()\">" +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.a\" ><br>" +
         ">> mkdir tutorial1 <br>" +
         ">> save tutorial1/file1 <br> " +
         ">> clear all <br>" +
         ">> load tutorial1/file1" +
         "</label><br>" +
-        "<label class=\"checkbox-inline\" ng-show=\"controllerSayHello()\"> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.b\" ><br>" +
         ">> mkdir ('tutorial1') <br> " +
         ">> cd tutorial1 <br> " +
         ">> clear <br> " +
         ">> load file1 " +
         "</label><br> " +
-        "<label class=\"checkbox-inline\" ng-show=\"GetRandom()\"> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.c\" ><br> " +
         " >> newdir = \'tutorial1\'; <br> " +
         " >> save tutorial1 <br> " +
         " >> clear all <br> " +
         " >> load tutorial1/file1 " +
         " </label><br> " +
-        "<label class=\"checkbox-inline\" ng-show=\"GetRandom()\"> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=3;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.d\" ><br> " +
         "       >> mkdir('tutorial1') <br> " +
         "       >> save mkdir/file1 <br> " +
         "       >> clear <br> " +
         "       >> load tutorial1/file1 " +
         "   </label><br> " +
-        "<label class=\"checkbox-inline\" ng-show=\"GetRandom()\"> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=4;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-model=\"formData.option.e\" ><br> " +
         "   >> newdir = tutorial; <br> " +
         "   >> mkdir('newdir') <br> " +
@@ -2511,7 +2648,7 @@ app.directive("chapter2AssessmentP3", function () {
             "</h4>" +
 
 
-        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"CheckAnswers()\" type=\"button\" ></button> "+
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> "+
         "<br>"+
         "<h3>{{hints}}</h3>"
 
@@ -2543,11 +2680,7 @@ app.directive("chapter2AssessmentP4", function () {
         "<br>"+
         "<br>"+
             "<input type=\"text\" name=\"answerBox\" value=\"0\"><br>"+
-
-
-
-
-        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"GetRandom()\" type=\"button\" ></button> "
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='d';CheckAnswers()\" type=\"button\" ></button> "
 
 
     return directive;
