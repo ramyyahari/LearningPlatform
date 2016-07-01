@@ -2500,7 +2500,8 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
         
         if($scope.buttonID=='d')
         {   
-            if (document.getElementById("answerBox").value==5)
+            if(document.getElementById("answerBoxa").value==3&&!document.getElementById("answerBoxb").value&&document.getElementById("answerBoxc").value==2&&document.getElementById("answerBoxd").value==6&&!document.getElementById("answerBoxe").value&&document.getElementById("answerBoxf").value==6&&$scope.question.d)
+        
                 $scope.question.w = "Correct Answer!"
             else      
                 $scope.question.w = "Wrong Answer! "
@@ -2697,25 +2698,27 @@ app.directive("chapter2AssessmentP4", function () {
     var directive = {};
     directive.restrict = 'A';
     directive.template =
-        "<h1>The following commands are typed at the command prompt. There are no variables in"+
+       "<h1>The following commands are typed at the command prompt. There are no variables in"+
     "the workspace prior to typing these commands. What are the variables in the" +
     "workspace and their values after typing these commands?</h1>" +
         "<h4>     " +
-
-        "<label class=\"checkbox-inline\" ng-show=\"GetRandom()\">" +
         " >> a= 3<br>" +
         ">> b = 2 <br> " +
         ">> c = a=b; d = a*c; <br> " +
-        ">> e = 4" +
-        ">> f = 2*a;" +
-        ">>clear b, e" +
-        "</label><br>" +
+        ">> e = 4<br>" +
+        ">> f = 2*a;<br>" +
+        ">>clear b, e <br>" +
 
         "<br>"+
         "<br>"+
-        "<input type=\"text\" id=\"answerBox\" name=\"answerBox\" value=\"0\"><br>"+
-        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='d';CheckAnswers()\" type=\"button\" ></button> " +
-            "<br>"+
+        "<input type=\"text\" id=\"answerBoxa\" name=\"answerBox\" value=\"a\"><br></h4>"+
+        "<input type=\"text\" id=\"answerBoxb\" name=\"answerBox\" value=\"b\"><br></h4>"+
+        "<input type=\"text\" id=\"answerBoxc\" name=\"answerBox\" value=\"c\"><br></h4>"+
+        "<input type=\"text\" id=\"answerBoxd\" name=\"answerBox\" value=\"d\"><br></h4>"+
+        "<input type=\"text\" id=\"answerBoxe\" name=\"answerBox\" value=\"e\"><br></h4>"+
+        
+        "<input type=\"text\" id=\"answerBoxe\" name=\"answerBox\" value=\"f\"><br></h4>"+
+        " <button value='Change Text' ng-model=\"formData.option.q4\" ng-click=\"CheckAnswers()\" class=\"btn btn-success\" type=\"button\" >Check Answer</button> ";        "<br>"+
             "<h3>{{question.w}}</h3>"
 
 
