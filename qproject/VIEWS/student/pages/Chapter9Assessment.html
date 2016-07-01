@@ -1,0 +1,518 @@
+<div>
+
+    <h1>Chapter 9 assessment problems: Conditionals</h1>
+
+    <h3>1. What is <i><b>junk</b></i> as a result of the given Matlab code fragment?</h3>
+<pre style='color:#000000;background:#ffffff;'>junk <span style='color:#0000ff; '>=</span> 3<span
+        style='color:#0000ff; '>&amp;</span><span style='color:#0000ff; font-weight:bold; '>pi</span>
+</pre>
+
+    <form id="mcqOne">
+        <input id="Q1R1" type="radio" name="answers1" value="1"><label class="btn btn-default bWidth"
+                                                                       for="Q1R1">0</label><br>
+        <input id="Q1R2" type="radio" name="answers1" value="2"><label class="btn btn-default bWidth"
+                                                                       for="Q1R2">1</label><br>
+        <input id="Q1R3" type="radio" name="answers1" value="3"><label class="btn btn-default bWidth" for="Q1R3">None of
+        the above</label><br><br>
+        <input class="btn btn-success" id="submitone" type="submit" value="Submit" onclick="mcqone()">
+    </form>
+
+    <div id="mcqonehintbox9"></div>
+    <br>
+
+    <h3>2. Calculate the result of the given Matlab code fragment if the variables <br>have the
+        following values: </h3>
+
+    <pre style='color:#000000;background:#ffffff;'>a <span style='color:#0000ff; '>=</span> 8<span
+            style='color:#0000ff; '>;</span>  b <span style='color:#0000ff; '>=</span> 2<span
+            style='color:#0000ff; '>;</span>  c <span style='color:#0000ff; '>=</span> 4<span
+            style='color:#0000ff; '>;</span>  d <span style='color:#0000ff; '>=</span> 3<span
+            style='color:#0000ff; '>;</span>  e <span style='color:#0000ff; '>=</span> 1<span
+            style='color:#0000ff; '>;</span>
+
+x <span style='color:#0000ff; '>=</span> 1<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>if</span> <span style='color:#0000ff; '>(</span>a<span
+                style='color:#0000ff; '>&lt;</span><span style='color:#0000ff; '>=</span>b <span
+                style='color:#0000ff; '>|</span> b<span style='color:#0000ff; '>+</span>c<span style='color:#0000ff; '>&lt;</span>e<span
+                style='color:#0000ff; '>)</span>
+    x <span style='color:#0000ff; '>=</span> 2<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>elseif</span> b<span style='color:#0000ff; '>&lt;</span>c <span
+                style='color:#0000ff; '>&amp;</span> c<span style='color:#0000ff; '>></span>d
+    x <span style='color:#0000ff; '>=</span> 1<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>elseif</span> d<span style='color:#0000ff; '>></span><span
+                style='color:#0000ff; '>=</span>e
+    x <span style='color:#0000ff; '>=</span> 0<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>else</span>
+    x <span style='color:#0000ff; '>=</span> <span style='color:#0000ff; '>-</span>1<span
+                style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>end</span>
+</pre>
+
+
+    <h4><i>x =</i> <input type="number" id="assest1input1"><br><br>
+        <button class="btn btn-success" type="button" onclick='changeTextAssest1()' value='Change Text'>Submit</button>
+    </h4>
+
+    <h4>
+        <div class="tags" id="assest1"></div>
+    </h4>
+    <br>
+
+
+    <h3>3. What is <i><b>junk</b></i> as a result of the given Matlab code fragment?</h3>
+<pre style='color:#000000;background:#ffffff;'>junk <span style='color:#0000ff; '>=</span> 3<span
+        style='color:#0000ff; '>|</span>0
+</pre>
+
+
+    <form id="mcqTwo">
+        <input id="Q2R1" type="radio" name="answers2" value="1"><label class="btn btn-default bWidth"
+                                                                       for="Q2R1">0</label><br>
+        <input id="Q2R2" type="radio" name="answers2" value="2"><label class="btn btn-default bWidth"
+                                                                       for="Q2R2">1</label><br>
+        <input id="Q2R3" type="radio" name="answers2" value="3"><label class="btn btn-default bWidth" for="Q2R3">None of
+        the above</label><br><br>
+        <input class="btn btn-success" id="submittwo" type="submit" value="Submit" onclick="mcqtwo()">
+    </form>
+
+    <div id="mcqtwohintbox9"></div>
+    <br>
+
+
+    <h3>4. What value does the variable <b><i>x</i></b> have as the result of the given Matlab <br>code
+        fragment? </h3>
+
+    <pre style='color:#000000;background:#ffffff;'>a <span style='color:#0000ff; '>=</span> 6<span
+            style='color:#0000ff; '>;</span>  b <span style='color:#0000ff; '>=</span> 3<span
+            style='color:#0000ff; '>;</span>  c <span style='color:#0000ff; '>=</span> 1<span
+            style='color:#0000ff; '>;</span>  d <span style='color:#0000ff; '>=</span> 3<span
+            style='color:#0000ff; '>;</span>  e <span style='color:#0000ff; '>=</span> <span
+            style='color:#0000ff; '>-</span>4<span style='color:#0000ff; '>;</span>
+
+x <span style='color:#0000ff; '>=</span> 1<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>if</span> <span style='color:#0000ff; '>(</span>a<span
+                style='color:#0000ff; '>&lt;</span><span style='color:#0000ff; '>=</span>b <span
+                style='color:#0000ff; '>&amp;</span> c<span style='color:#0000ff; '>&lt;</span>d<span
+                style='color:#0000ff; '>)</span>
+    x <span style='color:#0000ff; '>=</span> 3<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>elseif</span> b<span style='color:#0000ff; '>&lt;</span>c <span
+                style='color:#0000ff; '>|</span> c<span style='color:#0000ff; '>&lt;</span>d
+    x <span style='color:#0000ff; '>=</span> 1<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>elseif</span> d<span style='color:#0000ff; '>></span><span
+                style='color:#0000ff; '>=</span>c
+    x <span style='color:#0000ff; '>=</span> 2<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>else</span>
+    x <span style='color:#0000ff; '>=</span> 0<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>end</span>
+</pre>
+
+
+    <h4><i>x =</i> <input type="number" id="assest1input2"><br><br>
+        <button class="btn btn-success" type="button" onclick='changeTextAssest2()' value='Change Text'>Submit</button>
+    </h4>
+
+    <h4>
+        <div class="tags" id="assest2"></div>
+    </h4>
+    <br>
+
+
+    <h3>5. What is <i><b>junk</b></i> as a result of the given Matlab code fragment?</h3>
+<pre style='color:#000000;background:#ffffff;'>junk <span style='color:#0000ff; '>=</span> 3<span
+        style='color:#0000ff; '>&lt;</span>2<span style='color:#0000ff; '>&lt;</span>4
+</pre>
+
+    <form id="mcqThree">
+        <input id="Q3R1" type="radio" name="answers1" value="1"><label class="btn btn-default bWidth"
+                                                                       for="Q3R1">0</label><br>
+        <input id="Q3R2" type="radio" name="answers1" value="2"><label class="btn btn-default bWidth"
+                                                                       for="Q3R2">1</label><br>
+        <input id="Q3R3" type="radio" name="answers1" value="3"><label class="btn btn-default bWidth" for="Q3R3">None of
+        the above</label><br><br>
+        <input class="btn btn-success" id="submitone" type="submit" value="Submit" onclick="mcqthree()">
+    </form>
+
+
+    <div id="mcqthreehintbox"></div>
+    <br>
+    <h3>6. What value does the variable <i><b>y</b></i> have as the result of the given Matlab <br>code
+        fragment? </h3>
+
+    <pre style='color:#000000;background:#ffffff;'>x <span style='color:#0000ff; '>=</span> 3<span
+            style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>if</span> x<span style='color:#0000ff; '>&lt;</span>0
+    y <span style='color:#0000ff; '>=</span> 0<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>elseif</span> 0<span style='color:#0000ff; '>&lt;</span><span
+                style='color:#0000ff; '>=</span>x <span style='color:#0000ff; '>&amp;</span> x<span
+                style='color:#0000ff; '>&lt;</span>2
+    y <span style='color:#0000ff; '>=</span> x<span style='color:#0000ff; '>.</span><span
+                style='color:#0000ff; '>^</span>2<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>elseif</span> x<span style='color:#0000ff; '>></span><span
+                style='color:#0000ff; '>=</span>2 <span style='color:#0000ff; '>&amp;</span> x <span
+                style='color:#0000ff; '>&lt;</span><span style='color:#0000ff; '>=</span>3
+    y <span style='color:#0000ff; '>=</span> 2<span style='color:#0000ff; '>.</span><span
+                style='color:#0000ff; '>*</span>x <span style='color:#0000ff; '>+</span> 1<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>else</span>
+    y <span style='color:#0000ff; '>=</span> 4<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>end</span>
+</pre>
+
+    <h4><i>y =</i> <input type="number" id="assest1input3"><br><br>
+        <button class="btn btn-success" type="button" onclick='changeTextAssest3()' value='Change Text'>Submit</button>
+    </h4>
+
+    <h4>
+        <div class="tags" id="assest3"></div>
+    </h4>
+    <br>
+
+    <h3>7. What is <i><b>junk</b></i> resulting from the code below?</h3>
+<pre style='color:#000000;background:#ffffff;'>junk <span style='color:#0000ff; '>=</span> <span
+        style='color:#800000; '>0.1</span><span style='color:#0000ff; '>&lt;</span><span
+        style='color:#800000; '>0.2</span><span style='color:#0000ff; '>&lt;</span><span
+        style='color:#800000; '>0.5</span>
+</pre>
+    <form id="mcqFour">
+        <input id="Q4R1" type="radio" name="answers1" value="1"><label class="btn btn-default bWidth"
+                                                                       for="Q4R1">0</label><br>
+        <input id="Q4R2" type="radio" name="answers1" value="2"><label class="btn btn-default bWidth"
+                                                                       for="Q4R2">1</label><br>
+        <input id="Q4R3" type="radio" name="answers1" value="3"><label class="btn btn-default bWidth" for="Q4R3">None of
+        the above</label><br><br>
+        <input class="btn btn-success" id="submitone" type="submit" value="Submit" onclick="mcqfour()">
+    </form>
+
+    <div id="mcqfourhintbox"></div>
+    <br>
+
+    <h3>8. What value does the variable <i><b>y</b></i> have as the result of the given Matlab <br>code
+        fragment? </h3>
+
+    <pre style='color:#000000;background:#ffffff;'>x <span style='color:#0000ff; '>=</span> 3<span
+            style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>if</span> 0<span style='color:#0000ff; '>&lt;</span>x<span
+                style='color:#0000ff; '>&lt;</span>2
+    y <span style='color:#0000ff; '>=</span> 4<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>else</span>
+    y <span style='color:#0000ff; '>=</span> 2<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>end</span>
+</pre>
+
+    <h4><i>y =</i> <input type="number" id="assest1input4"><br><br>
+        <button class="btn btn-success" type="button" onclick='changeTextAssest4()' value='Change Text'>Submit</button>
+    </h4>
+
+    <h4>
+        <div class="tags" id="assest4"></div>
+    </h4>
+    <br>
+
+
+    <!--    <script>
+            function changeTextAssest1() {
+                if (document.getElementById('assest1input1').value == 1) {
+                    document.getElementById('assest1').innerHTML = 'Correct!';
+                    document.getElementById('assest1input1').style.backgroundColor = "#bfff00";
+                }
+                else {
+                    document.getElementById('assest1').innerHTML = 'Incorrect! <br> <i>Exercise links: 9.1, 9.2; Lecture links: Lecture 9.1, Lecture 9.2, Tutorial links; </i>';
+                    /*.style.backgroundColor = "yellow";*/
+                    document.getElementById('assest1input1').style.backgroundColor = "#ff8000";
+                }
+            }
+
+            function changeTextAssest2() {
+                if (document.getElementById('assest1input2').value == 1) {
+                    document.getElementById('assest2').innerHTML = 'Correct!';
+                    document.getElementById('assest1input2').style.backgroundColor = "#bfff00";
+                }
+                else {
+                    document.getElementById('assest2').innerHTML = 'Incorrect! <br> <i>Exercise links: 9.1, 9.2; Lecture links: Lecture 9.1, Lecture 9.2, Tutorial links;</i>';
+                    /*.style.backgroundColor = "yellow";*/
+                    document.getElementById('assest1input2').style.backgroundColor = "#ff8000";
+                }
+            }
+
+            function changeTextAssest3() {
+                if (document.getElementById('assest1input3').value == 7) {
+                    document.getElementById('assest3').innerHTML = 'Correct!';
+                    document.getElementById('assest1input3').style.backgroundColor = "#bfff00";
+                }
+                else {
+                    document.getElementById('assest3').innerHTML = 'Incorrect! <br> <i>Exercise links: 9.1, 9.2; Lecture links: Lecture 9.1, Lecture 9.2, Tutorial links; </i>';
+                    /*.style.backgroundColor = "yellow";*/
+                    document.getElementById('assest1input3').style.backgroundColor = "#ff8000";
+                }
+            }
+
+            function changeTextAssest4() {
+                if (document.getElementById('assest1input4').value == 4) {
+                    document.getElementById('assest4').innerHTML = 'Correct!';
+                    document.getElementById('assest1input4').style.backgroundColor = "#bfff00";
+                }
+                else {/*Refer material under Lecture Videos(10.1), Example Videos(10.2, 10.3, 10.4), Tutorials(10.2, 10.4, 10.8)*/
+                    document.getElementById('assest4').innerHTML = 'Incorrect! <br> <i>Exercise links: 9.3; Lecture links Lecture 9.1, Lecture 9.2: Tutorial links; </i>';
+                    /*.style.backgroundColor = "yellow";*/
+                    document.getElementById('assest1input4').style.backgroundColor = "#ff8000";
+                }
+            }
+
+            function changeTextAssest5() {
+                if (document.getElementById('assest1input5').value == -2) {
+                    document.getElementById('assest5').innerHTML = 'Correct!';
+                    document.getElementById('assest1input5').style.backgroundColor = "#bfff00";
+                }
+                else {
+                    document.getElementById('assest5').innerHTML = 'Incorrect! <br> <i>Refer material under Lecture Videos(10.1), Exercise Videos(10.2, 10.4), Tutorials(10.2, 10.4, 10.8)</i>';
+                    /*.style.backgroundColor = "yellow";*/
+                    document.getElementById('assest1input5').style.backgroundColor = "#ff8000";
+                }
+            }
+
+
+        </script>-->
+
+    <script>
+        var a = document.getElementById('assest1input1').value;
+
+        window.onload = checkprevstate();
+
+        function checkprevstate() {
+            // alert('checking')
+
+
+            document.getElementById('assest1input1').value = GetState("9assest1");
+            document.getElementById('assest1input2').value = GetState("9assest2");
+            document.getElementById('assest1input3').value = GetState("9assest3");
+            document.getElementById('assest1input4').value = GetState("9assest4");
+
+
+            //if user hasnt entered anything. no need for checks
+            if (document.getElementById('assest1input1').value != '') {
+                changeTextAssest1();
+            }
+
+            if (document.getElementById('assest1input2').value != '') {
+                changeTextAssest2();
+            }
+
+            if (document.getElementById('assest1input3').value != '') {
+                changeTextAssest3();
+            }
+
+            if (document.getElementById('assest1input4').value != '') {
+                changeTextAssest4();
+            }
+
+            if (document.getElementById('assest1input5').value != '') {
+                changeTextAssest5();
+            }
+
+
+        }
+
+        function SaveState(currentValue, stateName) {
+            localStorage.setItem(stateName, currentValue);
+
+        }
+
+        function GetState(stateName) {
+            return localStorage.getItem(stateName);
+
+        }
+
+        function changeTextAssest1() {
+            if (document.getElementById('assest1input1').value == 1) {
+                document.getElementById('assest1').innerHTML = 'Correct!';
+                document.getElementById('assest1input1').style.backgroundColor = "#bfff00";
+                SaveState(document.getElementById('assest1input1').value, "9assest1");
+            }
+            else {
+                document.getElementById('assest1').innerHTML = 'Incorrect! <br> <i>Exercise links: 9.1, 9.2; Lecture links: Lecture 9.1, Lecture 9.2, Tutorial links; </i>';
+                /*.style.backgroundColor = "yellow";*/
+                document.getElementById('assest1input1').style.backgroundColor = "#ff8000";
+                //save current values if user got their answer incorrect
+                SaveState(document.getElementById('assest1input1').value, "9assest1");
+            }
+        }
+
+        function changeTextAssest2() {
+            if (document.getElementById('assest1input2').value == 1) {
+                document.getElementById('assest2').innerHTML = 'Correct!';
+                document.getElementById('assest1input2').style.backgroundColor = "#bfff00";
+                SaveState(document.getElementById('assest1input2').value, "9assest2");
+            }
+            else {
+                document.getElementById('assest2').innerHTML = 'Incorrect! <br> <i>Exercise links: 9.1, 9.2; Lecture links: Lecture 9.1, Lecture 9.2, Tutorial links;</i>';
+                /*.style.backgroundColor = "yellow";*/
+                document.getElementById('assest1input2').style.backgroundColor = "#ff8000";
+                SaveState(document.getElementById('assest1input2').value, "9assest2");
+            }
+        }
+
+        function changeTextAssest3() {
+            if (document.getElementById('assest1input3').value == 7) {
+                document.getElementById('assest3').innerHTML = 'Correct!';
+                document.getElementById('assest1input3').style.backgroundColor = "#bfff00";
+                SaveState(document.getElementById('assest1input3').value, "9assest3");
+            }
+            else {
+                document.getElementById('assest3').innerHTML = 'Incorrect! <br> <i>Exercise links: 9.1, 9.2; Lecture links: Lecture 9.1, Lecture 9.2, Tutorial links; </i>';
+                /*.style.backgroundColor = "yellow";*/
+                document.getElementById('assest1input3').style.backgroundColor = "#ff8000";
+                SaveState(document.getElementById('assest1input3').value, "9assest3");
+            }
+        }
+
+        function changeTextAssest4() {
+            if (document.getElementById('assest1input4').value == '4') {
+                document.getElementById('assest4').innerHTML = 'Correct!';
+                document.getElementById('assest1input4').style.backgroundColor = "#bfff00";
+                SaveState(document.getElementById('assest1input4').value, "9assest4");
+            }
+            else {/*Refer material under Lecture Videos(10.1), Example Videos(10.2, 10.3, 10.4), Tutorials(10.2, 10.4, 10.8)*/
+                document.getElementById('assest4').innerHTML = 'Incorrect! <br> <i>Exercise links: 9.3; Lecture links Lecture 9.1, Lecture 9.2: Tutorial links; </i>';
+                /*.style.backgroundColor = "yellow";*/
+                document.getElementById('assest1input4').style.backgroundColor = "#ff8000";
+                SaveState(document.getElementById('assest1input4').value, "9assest4");
+            }
+        }
+
+        /*        function changeTextAssest5() {
+         if (document.getElementById('assest1input5').value == -2) {
+         document.getElementById('assest5').innerHTML = 'Correct!';
+         document.getElementById('assest1input5').style.backgroundColor = "#bfff00";
+         SaveState(document.getElementById('assest1input5').value, "assest5");
+         }
+         else {
+         document.getElementById('assest5').innerHTML = 'Incorrect! <br> <i>Refer material under Lecture Videos(10.1), Exercise Videos(10.2, 10.4), Tutorials(10.2, 10.4, 10.8)</i>';
+         /!*.style.backgroundColor = "yellow";*!/
+         document.getElementById('assest1input5').style.backgroundColor = "#ff8000";
+         SaveState(document.getElementById('assest1input5').value, "assest5");
+         }
+         }*/
+
+        function mcqone() {
+            $(function () {
+                $("#submitone").click(function () {
+                    var a = $('input[name="answers1"]:checked').val();
+                    if (a == 4) {
+                        document.getElementById("mcqonehintbox9").innerHTML = "Correct!"
+                    }
+                    if (a == 3) {
+                        document.getElementById("mcqonehintbox9").innerHTML = 'Incorrect! <br> <i>(Hint: cumulative sum)</i>';
+                    }
+
+                    if (a == 2) {
+                        //(Hints: junk not defined as array; there is a cumulative sum)
+                        document.getElementById("mcqonehintbox9").innerHTML = 'Incorrect! <br> <i>(Hints: junk not defined as array; there is a cumulative sum)</i>';
+
+                    }
+                    if (a == 1) {
+                        //(Hint:junk is not defined as an array)
+                        document.getElementById("mcqonehintbox9").innerHTML = 'Incorrect! <br> <i>(Hint:junk is not defined as an array)</i>';
+
+
+                    }
+                });
+            });
+        }
+
+         function mcqtwo() {
+         $(function () {
+         $("#submittwo").click(function () {
+             alert('in here');
+         var a = $('input[name="answers2"]:checked').val();
+         if (a == 1) {
+         document.getElementById("mcqtwohintbox9").innerHTML = 'Incorrect! <br> <i>(Hint: complete the for loop; it isn’t terminated by the first false “if”)</i>';
+         }
+         if (a == 2) {
+         document.getElementById("mcqtwohintbox9").innerHTML = 'Incorrect! <br> <i>(Hint: count not created as array.)</i>';
+         }
+
+         if (a == 3) {
+         document.getElementById("mcqtwohintbox9").innerHTML = "Correct!"
+         }
+
+         if (a == 4) {
+         document.getElementById("mcqtwohintbox9").innerHTML = 'Incorrect! <br> <i>Refer material under Lecture Videos(10.1), Exercise Videos(10.1), Tutorials(10.5)</i>';
+         }
+         });
+         });
+         }
+
+         function mcqthree() {
+         $(function () {
+         $("#submitthree").click(function () {
+         var a = $('input[name="answers3"]:checked').val();
+         if (a == 1) {
+         document.getElementById("mcqthreehintbox").innerHTML = 'Incorrect! <br> <i>(Hint: var1 is asked for, not var2)</i>';
+         }
+         if (a == 2) {
+         document.getElementById("mcqthreehintbox").innerHTML = 'Incorrect! <br> <i>(Hint: unspecified array locations are filled with zeros)</i>';
+         }
+         if (a == 3) {
+         document.getElementById("mcqthreehintbox").innerHTML = 'Incorrect! <br> <i>(Hint: index variable increments by 2s)</i>';
+         }
+         if (a == 4) {
+         document.getElementById("mcqthreehintbox").innerHTML = "Correct!"
+         }
+         });
+         });
+         }
+
+         function mcqfour() {
+         $(function () {
+         $("#submitfour").click(function () {
+         var a = $('input[name="answers4"]:checked').val();
+         if (a == 1) {
+         document.getElementById("mcqfourhintbox").innerHTML = 'Incorrect! <br> <i>(Hint: num isn’t defined as an array)</i>';
+         }
+         if (a == 2) {
+         document.getElementById("mcqfourhintbox").innerHTML = 'Incorrect! <br> <i>(Hint: num is not defined as an array)</i>';
+         }
+         if (a == 3) {
+         document.getElementById("mcqfourhintbox").innerHTML = 'Incorrect! <br> <i>(Hint: num not defined as array))</i>';
+         }
+         if (a == 4) {
+         document.getElementById("mcqfourhintbox").innerHTML = 'Incorrect! <br> <i>(Hint: TRUE if statement doesn’t terminate FOR loop)</i>';
+         }
+         if (a == 5) {
+         document.getElementById("mcqfourhintbox").innerHTML = "Correct!"
+         }
+         });
+         });
+         }
+        /*
+         function mcqfive() {
+         $(function () {
+         $("#submitfive").click(function () {
+         var a = $('input[name="answers"]:checked').val();
+         if (a == 1) {
+         document.getElementById("mcqfivehintbox").innerHTML = "Correct!"
+         }
+         else {
+         document.getElementById("mcqfivehintbox").innerHTML = 'Incorrect! <br> <i>Refer material under Lecture Videos(10.2), Exercise Videos(10.2, 10.4), Tutorials(10.2, 10.4, 10.8)</i>';
+
+         }
+         });
+         });
+         }
+
+         function mcqsix() {
+         $(function () {
+         $("#submitsix").click(function () {
+         var a = $('input[name="answers"]:checked').val();
+         if (a == 1) {
+         document.getElementById("mcqsixinbox").innerHTML = "Correct!"
+         }
+         else {
+         document.getElementById("mcqsixinbox").innerHTML = 'Incorrect! <br> <i>Refer material under Lecture Videos(10.2), Exercise Videos(10.2, 10.4), Tutorials(10.2, 10.4, 10.8)</i>';
+
+         }
+         });
+         });
+         }*/
+    </script>
+
+</div>

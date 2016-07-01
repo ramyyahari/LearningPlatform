@@ -1,0 +1,64 @@
+
+<div ng-controller="ChapterTwoController">
+
+    <h1>Select all of the options below which will:</h1>
+    <h4>
+        <li>Create a directory named <i>tutorial1</i> in the current working directory</li>
+        <li>Save the workspace in the <i>tutorial1</i> directory in a file named <i>file1</i></li>
+        <li>Clear the workspace</li>
+        <li>Load <i>file1</i> into the workspace</li>
+
+    </h4>
+
+    <label class="checkbox-inline" ng-show="GetRandom()">
+        <input type="checkbox" name="favoriteColors" ng-model="formData.option.a" ><br>
+        >> mkdir tutorial1 <br>
+        >> save tutorial1/file1 <br>
+        >> clear all <br>
+        >> load tutorial1/file1
+    </label><br>
+    <label class="checkbox-inline" ng-show="1">
+        <input type="checkbox" name="favoriteColors" ng-model="formData.option.b" ><br>
+        >> mkdir ('tutorial1') <br>
+        >> cd tutorial1 <br>
+        >> clear <br>
+        >> load file1
+    </label><br>
+    <label class="checkbox-inline" ng-show="GetRandom()">
+        <input type="checkbox" name="favoriteColors" ng-model="formData.option.c" ><br>
+        >> newdir = 'tutorial1'; <br>
+        >> save tutorial1 <br>
+        >> clear all <br>
+        >> load tutorial1/file1
+    </label><br>
+
+    <label class="checkbox-inline" ng-show="GetRandom()">
+        <input type="checkbox" name="favoriteColors" ng-model="formData.option.d"><br>
+        >> mkdir('tutorial1') <br>
+        >> save mkdir/file1 <br>
+        >> clear <br>
+        >> load tutorial1/file1
+    </label><br>
+
+    <label class="checkbox-inline" ng-show="GetRandom()">
+        <input type="checkbox" name="favoriteColors" ng-model="formData.option.e"><br>
+        >> newdir = tutorial; <br>
+        >> mkdir('newdir') <br>
+        >> save tutorial <br>
+        >> clear all <br>
+        >> load tutorial1/file1
+    </label><br>
+
+    <button value='Change Text' class="btn btn-success" ng-click="CheckAnswers()" type="button" ></button>
+    <br>
+    {{hints}}
+
+
+    <div chapter2-assessment-p2></div>
+
+        <div chapter2-assessment-p3></div>
+
+        <div chapter2-assessment-p4></div>
+
+
+</div>
