@@ -2689,6 +2689,182 @@ app.controller('ChapterThreeController', ['$scope', '$location', 'State', functi
 
 }]);
 
+app.controller('ChapterFiveControllerOne', ['$scope', '$location', 'State', function ($scope, $location, State) {
+
+
+    $scope.formData = {};
+    $scope.formData.option = {
+        a:false,
+        b:false,
+        c:false,
+        d:false,
+        e:false
+    };
+    
+    //$scope.hints = "Hints: "
+    $scope.question={};
+    $scope.buttonID={};
+
+    var stat1=[1,1,1,1,1];
+    var stat2=[1,1,1,1,1];
+    var stat3=[1,1,1,1,1];
+    var count=0;
+
+    $scope.init = function() {
+        var i=0;
+        //console.log(stat1[0],stat1[1],stat1[2],stat1[3],stat1[4]);
+        //populate options for question1 
+        while(i<3)
+        {    
+        var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            //console.log(num);
+            if(stat1[num])
+            {
+                stat1[num]=0;
+                i++;
+            }
+            if(i==1&&stat1[1])
+            {
+                i++;
+                stat1[1]=0;
+            }    
+        }
+        i=0;     
+        //var stat2=[1,1,1,1,1];
+        //populate options for question2
+        while(i<3)
+        {    
+            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            //console.log(num);
+            if(stat2[num])
+            {
+                stat2[num]=0;
+                i++;
+            }
+            if(i==1&&stat2[2])
+            {
+                i++;
+                stat2[2]=0;
+            }
+        }
+        i=0;
+        //populate options for question2
+        while(i<3)
+        {    
+            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            //console.log(num);
+            if(stat3[num])
+            {
+                stat3[num]=0;
+                i++;
+            }
+            if(i==1&&stat3[3])
+            {
+                i++;
+                stat3[3]=0;
+            }
+        }//
+    }  
+
+    $scope.test = function () {
+        console.log('inside redd')
+        console.log("red: " + $scope.formData.favoriteColors.red)
+    }
+
+    $scope.GetRandom = function () {
+        //console.log($scope.question.option+","+$scope.question.number)
+        if(!stat1[$scope.question.option]&&$scope.question.number==1)
+            return true;
+
+        if(!stat2[$scope.question.option]&&$scope.question.number==2)
+            return true;
+
+        if(!stat3[$scope.question.option]&&$scope.question.number==5)
+            return true;
+        else    
+            return false;
+        
+        //var num = Math.floor((Math.random() * (2) + 0));
+        //return num;
+    }
+
+    $scope.controllerSayHello = function () {
+        console.log("Hello from controllerSayHello")
+    }
+
+    $scope.CheckAnswers = function () {
+
+
+        if($scope.buttonID=='a')
+        {   
+            //console.log("question 1")
+            //console.log($scope.formData.option.a)
+            if($scope.formData.option.b)
+            {
+                if($scope.formData.option.a||$scope.formData.option.c||$scope.formData.option.d)
+                {    $scope.question.x = "Wrong Answer! "
+                   return
+                }
+                $scope.question.x = "Correct Answer!"
+            }
+            else      
+                $scope.question.x = "Wrong Answer! "
+        }
+        
+        if($scope.buttonID=='b')
+        {   
+            //console.log("question 1")
+            //console.log($scope.formData.option.a)
+            if($scope.formData.option.c)
+            {
+                if($scope.formData.option.a||$scope.formData.option.b||$scope.formData.option.d)
+                {    $scope.question.y = "Wrong Answer! "
+                   return
+                }
+                $scope.question.y = "Correct Answer!"
+            }
+            else      
+                $scope.question.y = "Wrong Answer! "
+        }
+        if($scope.buttonID=='e')
+        {   
+            //console.log("question 1")
+            //console.log($scope.formData.option.a)
+            if($scope.formData.option.a)
+            {
+                if($scope.formData.option.e||$scope.formData.option.c||$scope.formData.option.d)
+                {    $scope.question.x = "Wrong Answer! "
+                   return
+                }
+                $scope.question.l = "Correct Answer!"
+            }
+            else      
+                $scope.question.l = "Wrong Answer! "
+        }
+        
+        if($scope.buttonID=='c')
+        {   
+            if(document.getElementById("answerBoxa").value==3&&$scope.question.c)
+        
+                $scope.question.z = "Correct Answer!"
+            else      
+                $scope.question.z = "Wrong Answer! "
+        }
+
+        if($scope.buttonID=='d')
+        {   
+            if(document.getElementById("answerBoxb").value==3&&$scope.question.d)
+        
+                $scope.question.w = "Correct Answer!"
+            else      
+                $scope.question.w = "Wrong Answer! "
+        }
+     
+  }
+
+
+}]);
+
 //this directive has access to all controller covered in it
 app.directive("chapter2AssessmentP1", function () {
 
@@ -2697,12 +2873,12 @@ app.directive("chapter2AssessmentP1", function () {
     directive.restrict = 'A';
     directive.template =
         "<h1>Select all of the options below which will:</h1>"+
-        "<h4>"+
+        "<h3>"+
         "<li>Create a directory named <i>tutorial1</i> in the current working directory</li>"+
         "<li>Save the workspace in the <i>tutorial1</i> directory in a file named <i>file1</i></li>"+
         "<li>Clear the workspace</li>"+
         "<li>Load <i>file1</i> into the workspace</li>"+
-        "</h4>" +
+        "</h3>" +
 
         "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=0;GetRandom()\">" +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
@@ -2760,13 +2936,13 @@ app.directive("chapter2AssessmentP2", function () {
     directive.restrict = 'A';
     directive.template =
         "<h1>Provide a series of commands which will:</h1>" +
-        "<h4>     " +
+        "<h3>     " +
         "<li>Create a directory named tutorial2 in the current working directory</li>" +
         "<li>List the files and folders in the current working directory</li>" +
         "<li>Save the workspace in the tutorial2 directory in a file named myfile</li>" +
         "<li>Clear the workspace</li> " +
         "<li>Load file1 into the workspace</li>" +
-        "<li>Check the contents of the workspace</li></h4>" +
+        "<li>Check the contents of the workspace</li></h3>" +
 
 
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
@@ -3067,7 +3243,7 @@ app.directive("chapter3AssessmentP5", function () {
 
 });
 
-app.directive("chapter5AssessmentP1", function () {
+app.directive("chapter5Assessment1P1", function () {
 
 
     var directive = {};
@@ -3101,13 +3277,83 @@ app.directive("chapter5AssessmentP1", function () {
 
 });
 
-app.directive("chapter5AssessmentP2", function () {
+app.directive("chapter5Assessment1P2", function () {
 
 
     var directive = {};
     directive.restrict = 'A';
     directive.template =
         "<h1>Select the option below which results from the following MATLAB commands. Assume that no variables are present in the workspace before the commands are typed.<br> >> B = [0, 1, 2; 3, 4 5; 6 7, 8]<br>>>B(2,3) = 9</h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " 0 1 2 3 4 5 6 7 8" +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        "0 1 2  <br> " +
+        "3 4 5<br>"+
+        "6 7 8</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        "0 1 2  <br> " +
+        "3 4 9<br>"+
+        "6 7 8</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        " error" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+
+});
+
+app.directive("chapter5Assessment1P3", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Select the option below which results from the following MATLAB commands.  Assume that no variables are present in the workspace before the commands are typed.<br> >> C = [0, 1, 2; 3, 4  5; 6  7, 8]<br> >> C(4,3) = 9</h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " 0 1 2 3 4 5 6 7 8" +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        "0 1 2  <br> " +
+        "3 4 5<br>"+
+        "6 7 8</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        "0 1 2  <br> " +
+        "3 4 9<br>"+
+        "6 7 8</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        " error" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+
+});
+
+app.directive("chapter5Assessment1P4", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Select the option below which results from the following MATLAB commands.  Assume that no variables are present in the workspace before the commands are typed.<br> >> C = [0, 1, 2; 3, 4  5; 6  7, 8]<br> >> C(4,3) = 9</h1>" +
         "<h4>     " +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
