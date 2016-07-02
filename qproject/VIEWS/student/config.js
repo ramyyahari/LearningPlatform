@@ -15,6 +15,13 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when('/chapter2', {
             templateUrl: 'Chapter2Assessment.html'
         })
+        .when('/chapter3', {
+            templateUrl: 'Chapter3Assessment.html'
+        })
+        .when('/chapter5', {
+            templateUrl: 'Chapter5Assessment.html'
+        })
+        
         .when('/videos', {
             templateUrl: 'videos.htm'
         })
