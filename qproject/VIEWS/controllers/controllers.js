@@ -3243,7 +3243,7 @@ app.directive("chapter3AssessmentP5", function () {
 
 });
 
-app.directive("chapter5Assessment1P1", function () {
+app.directive("chapter5AssessmentP11", function () {
 
 
     var directive = {};
@@ -3277,7 +3277,7 @@ app.directive("chapter5Assessment1P1", function () {
 
 });
 
-app.directive("chapter5Assessment1P2", function () {
+app.directive("chapter5AssessmentP12", function () {
 
 
     var directive = {};
@@ -3312,7 +3312,7 @@ app.directive("chapter5Assessment1P2", function () {
 
 });
 
-app.directive("chapter5Assessment1P3", function () {
+app.directive("chapter5AssessmentP13", function () {
 
 
     var directive = {};
@@ -3347,13 +3347,13 @@ app.directive("chapter5Assessment1P3", function () {
 
 });
 
-app.directive("chapter5Assessment1P4", function () {
+app.directive("chapter5AssessmentP21", function () {
 
 
     var directive = {};
     directive.restrict = 'A';
     directive.template =
-        "<h1>Select the option below which results from the following MATLAB commands.  Assume that no variables are present in the workspace before the commands are typed.<br> >> C = [0, 1, 2; 3, 4  5; 6  7, 8]<br> >> C(4,3) = 9</h1>" +
+        "<h1>Select the option below which results from the following MATLAB commands. Assume that no variables are present in the workspace before the commands are typed. <br> >> A = 2:0.3:3 </h1>" +
         "<h4>     " +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
@@ -3380,4 +3380,390 @@ app.directive("chapter5Assessment1P4", function () {
         
     return directive;
 
+});
+
+app.directive("chapter5AssessmentP22", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Select the option below which results from the following MATLAB commands. Assume that no variables are present in the workspace before the commands are typed. <br> >> A = 2:0.3:3.1 </h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " 0 1 2 3 4 5 6 7 8" +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        "0 1 2  <br> " +
+        "3 4 5<br>"+
+        "6 7 8</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        "0 1 2  <br> " +
+        "3 4 9<br>"+
+        "6 7 8</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        " error" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+
+});
+
+
+app.directive("chapter5AssessmentP23", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Select all options below which will create the array: </h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " >> A = 0.1:0.3:1.0 " +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        ">> A = 0.1:0.3:1.2</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        ">> A = [0.1 0.4 0.7 1.0]"+
+        "</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        " >> A = [0.1,0.4,0.7,1]" +
+        "   </label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "All of the above" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+
+});
+
+
+app.directive("chapter5AssessmentP31", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Select the value of sizeA which results from the following MATLAB commands. Assume that no variables are present in the workspace before the commands are typed.<br> >> A = 2:0.3:3 <br> >> sizeA = size(A)</h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " sizeA = [1 3] " +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        " sizeA = [3]</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        "sizeA = [3 1]"+
+        "</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "sizeA = [1 4]" +
+        "   </label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "Error" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+
+});
+
+
+app.directive("chapter5AssessmentP32", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Select the values of nrowB and ncolB which result from the following MATLAB commands. Assume that no variables are present in the workspace before the commands are typed.<br> >> B = 0:0.1:1 <br> >> [nrowA, ncolA] = size(A)</h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " nrowA = 1 <br> ncolA = 10 " +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        "nrowA = 10 <br> ncolA = 1</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        "nrowA = 11<br>ncolA = 11"+
+        "</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "nrowA = 11 <br> ncolA = 11" +
+        "   </label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "Error" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+});
+
+
+app.directive("chapter5AssessmentP33", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Select the values of nrowA and ncolA which result from the following MATLAB commands. Assume that no variables are present in the workspace before the commands are typed.<br> >> C = 0:0.1:1 <br> >> sizeA = size(A)</h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " sizeA = [1 3]" +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        "sizeA = [3]</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        "sizeA = [3 1]"+
+        "</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "sizeA = [1 4]" +
+        "   </label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "Error" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+});
+
+
+
+app.directive("chapter5AssessmentP34", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Select all options below which will return the total number of elements in the array D as the variable ND. Assume that no variables are present in the workspace before the commands are typed.<br> >> D = 0:0.2:1 </h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " ND = 6" +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        "ND = length(D)</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        "ND = size(D)"+
+        "</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "ND = numel(D)" +
+        "   </label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "Error" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+});
+
+
+app.directive("chapter5AssessmentP41", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Select all options below which will return the a 22 matrix of “ones” and assigns it to a variable named MyOnesArray.<br> </h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " >> MyOnesArray = [1 1; 1 1]" +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        ">> ones(2,2) {hint: assign the array to a variable}<br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        ">> MyOnesArray = ones(2,2)"+
+        "</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        ">> MyOnesArray = ones(2)" +
+        "   </label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "None of the above" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+});
+
+
+app.directive("chapter5AssessmentP42", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Select all options below which will return a 34 matrix of “zeros” and assigns it to a variable named ZerosArray.<br> </h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " >> ZerosArray = zeros(3,4)" +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        ">> ZerosArray = zeros(4,3) {hint: this has two rows and three columns}<br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        ">> ZerosArray = [0, 0, 0, 0; 0 0 0, 0; 0, 0 0 0]"+
+        "</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        ">> Array = zeros(3,4) {hint: check the variable name}" +
+        "   </label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "None of the above" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+});
+
+
+app.directive("chapter5AssessmentP51", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>What is b as a result of the following commands?<br> >> A = [1 2; 3 4; 5 6] <br> >> b = A(2,3)</h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " b = 6" +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        "b = [3 4]<br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        "b = 4"+
+        "</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "None of the above" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+});
+
+
+app.directive("chapter5AssessmentP52", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>What is b as a result of the following commands?<br> >> A = [1 2 3; 4 5 6; 7 8 9] <br> >> B = A(2:3,1:2) </h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " b = 6" +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        "b = [3 4]<br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        "b = 4"+
+        "</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "None of the above" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
+});
+
+
+app.directive("chapter5AssessmentP53", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>What is b as a result of the following commands?<br> >> A = [1 2 3; 4 5 6; 7 8 9] <br> >> B = A(:,1:2) </h1>" +
+        "<h4>     " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=0;GetRandom()\">" +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
+        " b = 6" +
+        "</label><br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
+        "b = [3 4]<br>" +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
+        "b = 4"+
+        "</label><br> " +
+        "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
+        "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
+        "None of the above" +
+        "   </label><br> " +
+        "</h4>" +
+        " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
+        "<br>"+
+        "<h3>{{question.w}}</h3>"
+        
+    return directive;
 });
