@@ -2689,7 +2689,7 @@ app.controller('ChapterThreeController', ['$scope', '$location', 'State', functi
 
 }]);
 
-app.controller('ChapterFiveControllerOne', ['$scope', '$location', 'State', function ($scope, $location, State) {
+app.controller('ChapterFiveController', ['$scope', '$location', 'State', function ($scope, $location, State) {
 
 
     $scope.formData = {};
@@ -2705,9 +2705,9 @@ app.controller('ChapterFiveControllerOne', ['$scope', '$location', 'State', func
     $scope.question={};
     $scope.buttonID={};
 
-    var stat1=[1,1,1,1,1];
-    var stat2=[1,1,1,1,1];
-    var stat3=[1,1,1,1,1];
+    var stat1=[1,1,1,1];
+    var stat2=[1,1,1,1];
+    var stat3=[1,1,1,1];
     var count=0;
 
     $scope.init = function() {
@@ -3615,7 +3615,7 @@ app.controller('ChapterFiveControllerSix', ['$scope', '$location', 'State', func
 
 }]);
 
-app.controller('ChapterFiveControllerSix', ['$scope', '$location', 'State', function ($scope, $location, State) {
+app.controller('ChapterFiveControllerSeven', ['$scope', '$location', 'State', function ($scope, $location, State) {
 
 
     $scope.formData = {};
@@ -4246,7 +4246,7 @@ app.directive("chapter3AssessmentP5", function () {
 
 });
 
-app.directive("chapter5AssessmentP11", function () {
+app.directive("chapter5AssessmentP1", function () {
 
 
     var directive = {};
@@ -4280,7 +4280,7 @@ app.directive("chapter5AssessmentP11", function () {
 
 });
 
-app.directive("chapter5AssessmentP12", function () {
+app.directive("chapter5AssessmentP2", function () {
 
 
     var directive = {};
@@ -4315,7 +4315,7 @@ app.directive("chapter5AssessmentP12", function () {
 
 });
 
-app.directive("chapter5AssessmentP13", function () {
+app.directive("chapter5AssessmentP3", function () {
 
 
     var directive = {};

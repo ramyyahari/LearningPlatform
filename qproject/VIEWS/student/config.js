@@ -16,25 +16,25 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'Chapter2Assessment.html'
         })
         
-        .when('chapter51', {
-            templateUrl: 'Chapter5Assessment1.html'
+        .when('/chapter51', {
+            templateUrl: 'Chapter5Assessment.html'
         })
-        .when('chapter52', {
+        .when('/chapter52', {
             templateUrl: 'Chapter5Assessment2.html'
         })
-        .when('chapter53', {
+        .when('/chapter53', {
             templateUrl: 'Chapter5Assessment3.html'
         })
-        .when('chapter54', {
+        .when('/chapter54', {
             templateUrl: 'Chapter5Assessment4.html'
         })
-        .when('chapter55', {
+        .when('/chapter55', {
             templateUrl: 'Chapter5Assessment5.html'
         })
-        .when('chapter56', {
+        .when('/chapter56', {
             templateUrl: 'Chapter5Assessment6.html'
         })
-        .when('chapter57', {
+        .when('/chapter57', {
             templateUrl: 'Chapter5Assessment7.html'
         })
         
