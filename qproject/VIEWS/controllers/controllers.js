@@ -3717,6 +3717,7 @@ app.controller('ChapterFiveControllerSeven', ['$scope', '$location', 'State', fu
                 stat3[3]=0;
             }
         }//
+        i=0;
         while(i<3)
         {    
             var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
@@ -3732,7 +3733,7 @@ app.controller('ChapterFiveControllerSeven', ['$scope', '$location', 'State', fu
                 stat4[2]=0;
             }
         }//
-        
+        i=0;
         while(i<3)
         {    
             var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
@@ -3748,7 +3749,7 @@ app.controller('ChapterFiveControllerSeven', ['$scope', '$location', 'State', fu
                 stat5[2]=0;
             }
         }//
-
+        i=0;
         while(i<3)
         {    
             var num = Math.floor(Math.random()*(7));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
@@ -3839,10 +3840,14 @@ app.controller('ChapterFiveControllerSeven', ['$scope', '$location', 'State', fu
         
         if($scope.buttonID=='c')
         {   
-            if(document.getElementById("answerBoxa").value==3&&$scope.question.c)
-        
-                $scope.question.z = "Correct Answer!"
-            else      
+            if($scope.formData.option.c)
+            {
+                if($scope.formData.option.a||$scope.formData.option.b||$scope.formData.option.d)
+                {    $scope.question.y = "Wrong Answer! "
+                   return
+                }
+                $scope.question.y = "Correct Answer!"
+            }else      
                 $scope.question.z = "Wrong Answer! "
         }
         if($scope.buttonID=='d')
