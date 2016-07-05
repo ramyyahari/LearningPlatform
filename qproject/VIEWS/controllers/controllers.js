@@ -4653,6 +4653,7 @@ app.directive("chapter5AssessmentP41", function () {
         "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
         ">> ones(2,2) {hint: assign the array to a variable}<br>" +
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         ">> MyOnesArray = ones(2,2)"+
@@ -4689,6 +4690,7 @@ app.directive("chapter5AssessmentP42", function () {
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
         ">> ZerosArray = zeros(4,3) {hint: this has two rows and three columns}<br>" +
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         ">> ZerosArray = [0, 0, 0, 0; 0 0 0, 0; 0, 0 0 0]"+
@@ -4724,7 +4726,8 @@ app.directive("chapter5AssessmentP51", function () {
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
-        "b = [3 4]<br>" +
+        "b = [3 4]" +
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         "b = 4"+
@@ -4756,7 +4759,8 @@ app.directive("chapter5AssessmentP52", function () {
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
-        "b = [3 4]<br>" +
+        "b = [3 4]" +
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         "b = 4"+
@@ -4788,7 +4792,8 @@ app.directive("chapter5AssessmentP53", function () {
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
-        "b = [3 4]<br>" +
+        "b = [3 4]" +
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         "b = 4"+
@@ -4822,7 +4827,8 @@ app.directive("chapter5AssessmentP61", function () {
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
-        "b = [3 4]<br>" +
+        "b = [3 4]" +
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         "b = 4"+
@@ -4830,7 +4836,7 @@ app.directive("chapter5AssessmentP61", function () {
         "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=3;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
         "None of the above" +
-        "   </label><br> " +
+        "</label><br> " +
         "</h4>" +
         " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='a';CheckAnswers()\" type=\"button\" ></button> " +
         "<br>"+
@@ -4854,7 +4860,8 @@ app.directive("chapter5AssessmentP62", function () {
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
-        "b = [3 4]<br>" +
+        "b = [3 4]" +
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         "b = 4"+
@@ -4862,7 +4869,7 @@ app.directive("chapter5AssessmentP62", function () {
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
         "None of the above" +
-        "   </label><br> " +
+        "</label><br> " +
         "</h4>" +
         " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='b';CheckAnswers()\" type=\"button\" ></button> " +
         "<br>"+
@@ -4886,7 +4893,8 @@ app.directive("chapter5AssessmentP63", function () {
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
-        "b = [3 4]<br>" +
+        "b = [3 4]" +
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         "b = 4"+
