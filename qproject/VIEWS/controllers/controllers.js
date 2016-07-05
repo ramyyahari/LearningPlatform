@@ -2474,13 +2474,13 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
             if($scope.formData.option.c)
             {
                 if($scope.formData.option.a||$scope.formData.option.b||$scope.formData.option.d)
-                {    $scope.question.x = "Wrong Answer! "
+                {    $scope.question.y = "Wrong Answer! "
                    return
                 }
-                $scope.question.x = "Correct Answer!"
+                $scope.question.y = "Correct Answer!"
             }
             else      
-                $scope.question.x = "Wrong Answer! "
+                $scope.question.y = "Wrong Answer! "
         }
         if($scope.buttonID=='c')
         {   
@@ -2492,10 +2492,10 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
                 {    $scope.question.x = "Wrong Answer! "
                    return
                 }
-                $scope.question.x = "Correct Answer!"
+                $scope.question.z = "Correct Answer!"
             }
             else      
-                $scope.question.x = "Wrong Answer! "
+                $scope.question.z = "Wrong Answer! "
         }
         
         if($scope.buttonID=='d')
@@ -4108,7 +4108,7 @@ app.directive("chapter2AssessmentP4", function () {
         "<input type=\"text\" id=\"answerBoxe\" name=\"answerBox\" value=\"e\"><br></h4>"+
         
         "<input type=\"text\" id=\"answerBoxe\" name=\"answerBox\" value=\"f\"><br></h4>"+
-        " <button value='Change Text' ng-model=\"formData.option.q4\" ng-click=\"CheckAnswers()\" class=\"btn btn-success\" type=\"button\" >Check Answer</button> ";        "<br>"+
+        " <button value='Change Text' ng-model=\"formData.option.q4;question.number=4\" ng-click=\"buttonID='d';CheckAnswers()\" class=\"btn btn-success\" type=\"button\" >Check Answer</button> ";        "<br>"+
             "<h3>{{question.w}}</h3>"
 
 
