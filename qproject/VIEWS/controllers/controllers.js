@@ -3348,7 +3348,7 @@ app.controller('ChapterFiveControllerFive', ['$scope', '$location', 'State', fun
         //populate options for question1 
         while(i<3)
         {    
-        var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+        var num = Math.floor(Math.random()*(4));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat1[num])
             {
@@ -3366,7 +3366,7 @@ app.controller('ChapterFiveControllerFive', ['$scope', '$location', 'State', fun
         //populate options for question2
         while(i<3)
         {    
-            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            var num = Math.floor(Math.random()*(4));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat2[num])
             {
@@ -3383,7 +3383,7 @@ app.controller('ChapterFiveControllerFive', ['$scope', '$location', 'State', fun
         //populate options for question2
         while(i<3)
         {    
-            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            var num = Math.floor(Math.random()*(4));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat3[num])
             {
@@ -3507,7 +3507,7 @@ app.controller('ChapterFiveControllerSix', ['$scope', '$location', 'State', func
         //populate options for question1 
         while(i<3)
         {    
-        var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+        var num = Math.floor(Math.random()*(4));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat1[num])
             {
@@ -3525,7 +3525,7 @@ app.controller('ChapterFiveControllerSix', ['$scope', '$location', 'State', func
         //populate options for question2
         while(i<3)
         {    
-            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            var num = Math.floor(Math.random()*(4));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat2[num])
             {
@@ -3542,7 +3542,7 @@ app.controller('ChapterFiveControllerSix', ['$scope', '$location', 'State', func
         //populate options for question2
         while(i<3)
         {    
-            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            var num = Math.floor(Math.random()*(4));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat3[num])
             {
@@ -3669,7 +3669,7 @@ app.controller('ChapterFiveControllerSeven', ['$scope', '$location', 'State', fu
         //populate options for question1 
         while(i<3)
         {    
-        var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+        var num = Math.floor(Math.random()*(4));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat1[num])
             {
@@ -3687,7 +3687,7 @@ app.controller('ChapterFiveControllerSeven', ['$scope', '$location', 'State', fu
         //populate options for question2
         while(i<3)
         {    
-            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            var num = Math.floor(Math.random()*(4));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat2[num])
             {
@@ -3704,7 +3704,7 @@ app.controller('ChapterFiveControllerSeven', ['$scope', '$location', 'State', fu
         //populate options for question2
         while(i<3)
         {    
-            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            var num = Math.floor(Math.random()*(4));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat3[num])
             {
@@ -3720,7 +3720,7 @@ app.controller('ChapterFiveControllerSeven', ['$scope', '$location', 'State', fu
         i=0;
         while(i<3)
         {    
-            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            var num = Math.floor(Math.random()*(4));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat4[num])
             {
@@ -3736,7 +3736,7 @@ app.controller('ChapterFiveControllerSeven', ['$scope', '$location', 'State', fu
         i=0;
         while(i<3)
         {    
-            var num = Math.floor(Math.random()*(5));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            var num = Math.floor(Math.random()*(4));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat5[num])
             {
@@ -3752,7 +3752,7 @@ app.controller('ChapterFiveControllerSeven', ['$scope', '$location', 'State', fu
         i=0;
         while(i<3)
         {    
-            var num = Math.floor(Math.random()*(7));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
+            var num = Math.floor(Math.random()*(6));//Math.random()<.5;//Math.floor((Math.random()*2)+0);
             //console.log(num);
             if(stat6[num])
             {
@@ -4918,7 +4918,8 @@ app.directive("chapter5AssessmentP71", function () {
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
-        "b = [3 4]<br>" +
+        "b = [3 4]"+
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         "b = 4"+
@@ -4926,7 +4927,7 @@ app.directive("chapter5AssessmentP71", function () {
         "<label class=\"checkbox-inline\" ng-show=\"question.number=1;question.option=3;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
         "None of the above" +
-        "   </label><br> " +
+        "</label><br> " +
         "</h4>" +
         " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='a';CheckAnswers()\" type=\"button\" ></button> " +
         "<br>"+
@@ -4951,7 +4952,8 @@ app.directive("chapter5AssessmentP72", function () {
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
-        "b = [3 4]<br>" +
+        "b = [3 4]"+
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         "b = 4"+
@@ -4959,7 +4961,7 @@ app.directive("chapter5AssessmentP72", function () {
         "<label class=\"checkbox-inline\" ng-show=\"question.number=2;question.option=3;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
         "None of the above" +
-        "   </label><br> " +
+        "</label><br> " +
         "</h4>" +
         " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='b';CheckAnswers()\" type=\"button\" ></button> " +
         "<br>"+
@@ -4983,7 +4985,8 @@ app.directive("chapter5AssessmentP73", function () {
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
-        "b = [3 4]<br>" +
+        "b = [3 4]"+
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         "b = 4"+
@@ -4991,7 +4994,7 @@ app.directive("chapter5AssessmentP73", function () {
         "<label class=\"checkbox-inline\" ng-show=\"question.number=3;question.option=3;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
         "None of the above" +
-        "   </label><br> " +
+        "</label><br> " +
         "</h4>" +
         " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='c';CheckAnswers()\" type=\"button\" ></button> " +
         "<br>"+
@@ -5015,7 +5018,8 @@ app.directive("chapter5AssessmentP74", function () {
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=4;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
-        "b = [3 4]<br>" +
+        "b = [3 4]"+
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=4;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         "b = 4"+
@@ -5023,7 +5027,7 @@ app.directive("chapter5AssessmentP74", function () {
         "<label class=\"checkbox-inline\" ng-show=\"question.number=4;question.option=3;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
         "None of the above" +
-        "   </label><br> " +
+        "</label><br> " +
         "</h4>" +
         " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='d';CheckAnswers()\" type=\"button\" ></button> " +
         "<br>"+
@@ -5048,7 +5052,8 @@ app.directive("chapter5AssessmentP75", function () {
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=5;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
-        "b = [3 4]<br>" +
+        "b = [3 4]"+
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=5;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         "b = 4"+
@@ -5056,7 +5061,7 @@ app.directive("chapter5AssessmentP75", function () {
         "<label class=\"checkbox-inline\" ng-show=\"question.number=5;question.option=3;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
         "None of the above" +
-        "   </label><br> " +
+        " </label><br> " +
         "</h4>" +
         " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='e';CheckAnswers()\" type=\"button\" ></button> " +
         "<br>"+
@@ -5076,12 +5081,13 @@ app.directive("chapter5AssessmentP76", function () {
         "<h4>     " +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=6;question.option=0;GetRandom()\">" +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.a=true\" ng-model=\"formData.option.a\" ><br>" +
-        " >> deg = [0 45 90 135 180]" +
+        ">> deg = [0 45 90 135 180]" +
         ">> X = sind(deg)"+
         "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=6;question.option=1;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.b=true\" ng-model=\"formData.option.b\" ><br>" +
         ">> X = sind([0 45 90 135 180])" +
+        "</label><br>" +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=6;question.option=2;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.c=true\" ng-model=\"formData.option.c\" ><br> " +
         ">> k = 0:4<br> >> X = sind(45.*k)"+
@@ -5089,11 +5095,11 @@ app.directive("chapter5AssessmentP76", function () {
         "<label class=\"checkbox-inline\" ng-show=\"question.number=6;question.option=3;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.d=true\" ng-model=\"formData.option.d\" ><br> " +
         "Error" +
-        "   </label><br> " +
+        "</label><br> " +
         "<label class=\"checkbox-inline\" ng-show=\"question.number=6;question.option=4;GetRandom()\"> " +
         "<input type=\"checkbox\" name=\"favoriteColors\" ng-change=\"formData.option.e=true\" ng-model=\"formData.option.d\" ><br> " +
         "All of the above" +
-        "   </label><br> " +
+        "</label><br> " +
         
         "</h4>" +
         " <button value='Change Text' class=\"btn btn-success\" ng-click=\"buttonID='f';CheckAnswers()\" type=\"button\" ></button> " +
