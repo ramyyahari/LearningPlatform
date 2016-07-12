@@ -2458,10 +2458,10 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
                 $scope.question.x3 =""
                 $scope.question.x4 ="" 
                 $scope.question.x5 = "Correct Answer!"
-                document.getElementById("answerBoxa").style.backgroundColor = "green"
-                document.getElementById("answerBoxb").style.backgroundColor = "green"
-                document.getElementById("answerBoxc").style.backgroundColor = "green"
-                document.getElementById("answerBoxd").style.backgroundColor = "green"
+                document.getElementById("answerBoxa").style.backgroundColor = "yellowgreen"
+                document.getElementById("answerBoxb").style.backgroundColor = "yellowgreen"
+                document.getElementById("answerBoxc").style.backgroundColor = "yellowgreen"
+                document.getElementById("answerBoxd").style.backgroundColor = "yellowgreen"
             }
             else {
                 var str;
@@ -2483,13 +2483,13 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
                         str="Invalid option."
                     $scope.question.x1 = "This should \"make\" a directory!"+str;
 
-                    document.getElementById("answerBoxa").style.backgroundColor = "red"
+                    document.getElementById("answerBoxa").style.backgroundColor = "tomato"
                 }
                 
                 if(document.getElementById("answerBoxa").value=='e'){
                     $scope.question.x1 = ""
 
-                    document.getElementById("answerBoxa").style.backgroundColor = "green"
+                    document.getElementById("answerBoxa").style.backgroundColor = "yellowgreen"
                 }
                 if(document.getElementById("answerBoxb").value!='i'){
                     if(document.getElementById("answerBoxb").value=='a'||document.getElementById("answerBoxb").value=='m'||document.getElementById("answerBoxb").value=='e'||document.getElementById("answerBoxb").value=='l')
@@ -2506,13 +2506,13 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
                         str="Invalid option."           
                     $scope.question.x2 = "This should \"save\" the workspace!"+str;
                     
-                    document.getElementById("answerBoxb").style.backgroundColor = "red"
+                    document.getElementById("answerBoxb").style.backgroundColor = "tomato"
                 }
 
                 if(document.getElementById("answerBoxb").value=='i'){
                     $scope.question.x2 = ""
                     
-                    document.getElementById("answerBoxb").style.backgroundColor = "green"
+                    document.getElementById("answerBoxb").style.backgroundColor = "yellowgreen"
                 }
 
                 if(document.getElementById("answerBoxc").value!='g'){
@@ -2530,13 +2530,13 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
                         str="Invalid option."           
                     $scope.question.x3 = "This should \"clear\" the workspace!"+str;
                     
-                    document.getElementById("answerBoxc").style.backgroundColor = "red"
+                    document.getElementById("answerBoxc").style.backgroundColor = "tomato"
                 }
 
                 if(document.getElementById("answerBoxc").value=='g'){
                     $scope.question.x3 = "";
                     
-                    document.getElementById("answerBoxc").style.backgroundColor = "green"
+                    document.getElementById("answerBoxc").style.backgroundColor = "yellowgreen"
                 }
                 
                 if(document.getElementById("answerBoxd").value!='h'){
@@ -2554,13 +2554,13 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
                         str="Invalid option."           
                     $scope.question.x4 = "This should load file1!"+str;
                     
-                    document.getElementById("answerBoxd").style.backgroundColor = "red"
+                    document.getElementById("answerBoxd").style.backgroundColor = "tomato"
                 }
 
                 if(document.getElementById("answerBoxd").value=='h'){
                     $scope.question.x4 = "";
                     
-                    document.getElementById("answerBoxd").style.backgroundColor = "green"
+                    document.getElementById("answerBoxd").style.backgroundColor = "yellowgreen"
                 }
             }    
          }
