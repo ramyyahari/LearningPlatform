@@ -2604,7 +2604,14 @@ app.controller('ChapterTwoController', ['$scope', '$location', 'State', function
             else      
                 $scope.question.w = "Wrong Answer! "
         }
-     
+        
+        if($scope.buttonID=='e')
+        {   
+            if(document.getElementById("answerBoxf").value=='b'&&document.getElementById("answerBoxg").value=='c'&&document.getElementById("answerBoxh").value=='e'&&document.getElementById("answerBoxi").value=='a'&&document.getElementById("answerBoxj").value=='d')//&&$scope.question.e)        
+                $scope.question.l = "Correct Answer!"
+            else      
+                $scope.question.l = "Wrong Answer! "
+        }     
   }
 
 
@@ -4163,7 +4170,7 @@ app.directive("chapter2AssessmentP4", function () {
     "the workspace prior to typing these commands. What are the variables in the" +
     "workspace and their values after typing these commands?</h1>" +
         "<h4>     " +
-        " >> a= 3<br>" +
+        ">> a= 3<br>" +
         ">> b = 2 <br> " +
         ">> c = a=b; d = a*c; <br> " +
         ">> e = 4<br>" +
@@ -4179,15 +4186,43 @@ app.directive("chapter2AssessmentP4", function () {
         "<input type=\"text\" id=\"answerBoxe\" name=\"answerBox\" value=\"e\"><br></h4>"+
         
         "<input type=\"text\" id=\"answerBoxe\" name=\"answerBox\" value=\"f\"><br></h4>"+
-        " <button value='Change Text' ng-model=\"formData.option.q4;question.number=4\" ng-click=\"buttonID='d';CheckAnswers()\" class=\"btn btn-success\" type=\"button\" >Check Answer</button> ";        "<br>"+
+        "<button value='Change Text' ng-model=\"formData.option.q4;question.number=4\" ng-click=\"buttonID='d';CheckAnswers()\" class=\"btn btn-success\" type=\"button\" >Check Answer</button> <br>"+
             "<h3>{{question.w}}</h3>"
-
 
     return directive;
 
 });
 
 
+app.directive("chapter2AssessmentP5", function () {
+
+
+    var directive = {};
+    directive.restrict = 'A';
+    directive.template =
+        "<h1>Match the commands to their respective actions</h1>"+
+        "<h4>     " +
+        "<pre>a) mkdir                      Clear the screen                " +
+        "<input type=\"text\" id=\"answerBoxf\" name=\"answerBox\" value=\"\"></pre><br>"+
+        "<pre>b) clear                      List files                      " +
+        "<input type=\"text\" id=\"answerBoxg\" name=\"answerBox\" value=\"\"></pre><br>"+
+        "<pre>c) show                       Load                            " +
+        "<input type=\"text\" id=\"answerBoxh\" name=\"answerBox\" value=\"\"></pre><br>"+
+        "<pre>d) save                       Make directory                  " +
+        "<input type=\"text\" id=\"answerBoxi\" name=\"answerBox\" value=\"\"></pre><br>"+
+        "<pre>e) load                       Save files                      " +
+        "<input type=\"text\" id=\"answerBoxj\" name=\"answerBox\" value=\"\"></pre><br>"+
+        
+        "</h4><br>"+
+        "<br>"+
+        
+        " <button value='Change Text' ng-model=\"formData.option.q5;question.number=5\" ng-click=\"buttonID='e';CheckAnswers()\" class=\"btn btn-success\" type=\"button\" >Check Answer</button> <br>"+
+            "<h3>{{question.l}}</h3>"
+
+
+    return directive;
+
+});
 
 
 //this directive has access to all controller covered in it
